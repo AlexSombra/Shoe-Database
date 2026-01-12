@@ -106,6 +106,29 @@ Or the schema will be automatically created when you run the application for the
 2. **Existing Users**: Choose "Existing user" to login
 3. **Manage Shoes**: Use the shoe menu to add, view, edit, or delete shoes from your collection
 
+## Test Data: `test_random_user.py` (optional)
+
+Use `test_random_user.py` to quickly create a **fresh test user** and populate the database with a **random shoe collection**.
+
+- **What it does**:
+  - Prompts you for a **username** and **password**
+  - Deletes any existing user with that username (and their shoes)
+  - Creates the user (bcrypt-hashed password)
+  - Inserts **20 random shoes** (with at least **2 duplicate pairs**) for that user
+
+- **Before you run it**:
+  - Ensure PostgreSQL is running and your schema is created (run the app once or use `init_schema.sql`)
+  - Ensure your `.env` is set (same variables used by the app: `DB_NAME`, `DB_USER`, `DB_PASS`, `DB_HOST`, `DB_PORT`)
+  - Install dependencies: `pip install -r requirements.txt`
+
+- **Run it**:
+
+```bash
+python test_random_user.py
+```
+
+After it finishes, you can log into the main app with the same username/password you entered and see the generated shoes.
+
 ## Project Structure
 
 - `app.py` - Main application entry point

@@ -52,5 +52,9 @@ Desktop.ini
 
 # --- Project-specific (contains sensitive notes) ---
 Notes.txt
+notes.txt
 app_old_copy.py
+
+# --- Personal study notes ---
+java-functional-interfaces.md
 

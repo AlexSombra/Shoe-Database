@@ -38,6 +38,7 @@ test_*.py
 *.sqlite3
 
 # --- Secrets / local configuration ---
+.env
 .env.*
 !.env.example
 
